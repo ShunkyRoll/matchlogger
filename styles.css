@@ -1,0 +1,78 @@
+/* styles.css */
+@font-face {
+    font-family: 'Digital-7';
+    src: url('digital-7.ttf') format('truetype'); /* Ensure your digital-7.ttf font file is in the same directory as your CSS */
+}
+
+body, html {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #32529B; /* Royal Blue background */
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc; /* Subtle border for container */
+    color: white;
+}
+
+.header img {
+    margin-top: 10px; /* Adjust based on actual logo size */
+}
+
+.event-log {
+    color: #FFF;
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    text-align: left; /* Left align text */
+    margin: 0; /* Remove margin */
+}
+
+.event-log li {
+    display: flex; /* Use flex to align items */
+    justify-content: space-between; /* Space between text and button */
+    align-items: center; /* Align items vertically */
+    line-height: 1; /* No extra spacing between lines */
+}
+
+.delete-button {
+	background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    color: white; /* White text */
+    height: 1em; /* Set height to match text */
+    width: 1em; /* Set width to match text */
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center buttons */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px 2px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 40px; /* Ensure buttons do not shrink */
+    height: 40px; /* Set a consistent height */
+}
+
+.control-buttons button {
+    background-color: #FFC525; /* Green background */
+    color: #000000; /* Black text */
+    width: 90%;
+	font-weight: bold; /* Makes text bold */
+}
+
+.control-buttons {
+    margin-top: 20px; /* Space above control buttons */
+}

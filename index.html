@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Match Event Logger</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://stranraerfc.org/wp-content/uploads/2024/10/SFC-LIVE-7-white-transparent-2.png" alt="Team Logo">
+        </div>
+        
+        <div class="event-buttons">
+            <div class="section" style="background-color: #0000FF; padding: 10px;">
+                <h3>Stranraer</h3>
+                <div class="button-group">
+                    <button id="goal-stranraer">⚽</button>
+                    <button id="chance-stranraer">🙏</button>
+                    <button id="incident-stranraer">💥</button>
+                    <button id="yellow-card-stranraer">🟨</button>
+                    <button id="red-card-stranraer">🟥</button>
+                    <button id="funny-stranraer">🤣</button>
+                </div>
+            </div>
+
+            <div class="section" style="background-color: black; padding: 10px;">
+                <h3>Opposition</h3>
+                <div class="button-group">
+                    <button id="goal-opposition">⚽</button>
+                    <button id="chance-opposition">🙏</button>
+                    <button id="incident-opposition">💥</button>
+                    <button id="yellow-card-opposition">🟨</button>
+                    <button id="red-card-opposition">🟥</button>
+                    <button id="funny-opposition">🤣</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="control-buttons">
+            <button id="download-log" style="background-color: #4CAF50; color: white;">💾 Download Log</button>
+            <button id="clear-log" style="background-color: #F44336; color: white;">🗑️ Clear Log</button>
+        </div>
+
+        <h3>Event Log</h3>
+        <ul id="event-log" class="event-log"></ul>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
