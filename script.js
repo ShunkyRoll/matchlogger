@@ -23,12 +23,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.event-btn').forEach(button => {
         button.addEventListener('click', () => {
             const eventText = button.getAttribute('data-event');
+            const timestamp = new Date().toLocaleTimeString(); // Get current time as timestamp
             const newEvent = document.createElement('div');
-            newEvent.textContent = eventText;
+            newEvent.innerHTML = `${timestamp} - ${eventText} <button class="delete-btn" onclick="deleteEvent(this)">❌</button>`;
             eventLog.appendChild(newEvent);
             saveLog();
         });
     });
+
+    // Delete event function
+    window.deleteEvent = (button) => {
+        if (confirm('Are you sure you want to delete this event?')) {
+            button.parentElement.remove();
+            saveLog(); // Save the log after deletion
+        }
+    };
 
     // Download log as a .txt file
     downloadLogButton.addEventListener('click', () => {
