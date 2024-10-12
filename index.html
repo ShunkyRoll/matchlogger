@@ -3,52 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="Favicon.png" type="image/x-icon">
     <title>Match Event Logger</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://stranraerfc.org/wp-content/uploads/2024/10/SFC-LIVE-7-white-transparent-2.png" alt="Team Logo">
+            <img src="https://stranraerfc.org/wp-content/uploads/2024/10/SFC-LIVE-7-white-transparent-2.png" alt="Stranraer FC Logo">
         </div>
-        
-        <div class="event-buttons">
-            <div class="section" style="background-color: #0000FF; padding: 10px;">
-                <h3>Stranraer</h3>
-                <div class="button-group">
-                    <button id="goal-stranraer">⚽</button>
-                    <button id="chance-stranraer">🙏</button>
-                    <button id="incident-stranraer">💥</button>
-                    <button id="yellow-card-stranraer">🟨</button>
-                    <button id="red-card-stranraer">🟥</button>
-                    <button id="funny-stranraer">🤣</button>
-                </div>
-            </div>
-
-            <div class="section" style="background-color: black; padding: 10px;">
-                <h3>Opposition</h3>
-                <div class="button-group">
-                    <button id="goal-opposition">⚽</button>
-                    <button id="chance-opposition">🙏</button>
-                    <button id="incident-opposition">💥</button>
-                    <button id="yellow-card-opposition">🟨</button>
-                    <button id="red-card-opposition">🟥</button>
-                    <button id="funny-opposition">🤣</button>
-                </div>
-            </div>
-        </div>
-
         <div class="control-buttons">
-            <button id="download-log" style="background-color: #4CAF50; color: white;">💾 Download Log</button>
-            <button id="clear-log" style="background-color: #F44336; color: white;">🗑️ Clear Log</button>
+            <button id="downloadLog" style="background-color: #4CAF50; color: white;">💾 Download Log</button>
+            <button id="clearLog" style="background-color: #f44336; color: white;">🗑️ Clear Log</button>
         </div>
-
-        <h3>Event Log</h3>
-        <ul id="event-log" class="event-log"></ul>
-
+        <div class="event-buttons">
+            <div class="stranraer-buttons">
+                <h3 style="text-align: center; color: white;">Stranraer</h3>
+                <div class="event-row">
+                    <button class="event-btn" data-event="Goal ⚽ (Stranraer)">⚽</button>
+                    <button class="event-btn" data-event="Chance 🙏 (Stranraer)">🙏</button>
+                    <button class="event-btn" data-event="Close Up 🔍 (Stranraer)">🔍</button>
+                    <button class="event-btn" data-event="Funny 🤣 (Stranraer)">🤣</button>
+                </div>
+                <div class="event-row">
+                    <button class="event-btn" data-event="Yellow Card 🟨 (Stranraer)">🟨</button>
+                    <button class="event-btn" data-event="Red Card 🟥 (Stranraer)">🟥</button>
+                    <button class="event-btn" data-event="Substitution 🔄️ (Stranraer)">🔄️</button>
+                    <button class="event-btn" data-event="Incident 💥 (Stranraer)">💥</button>
+                </div>
+            </div>
+            <div class="opposition-buttons">
+                <h3 style="text-align: center; color: white;">Opposition</h3>
+                <div class="event-row">
+                    <button class="event-btn" data-event="Goal ⚽ (Opposition)">⚽</button>
+                    <button class="event-btn" data-event="Chance 🙏 (Opposition)">🙏</button>
+                    <button class="event-btn" data-event="Close Up 🔍 (Opposition)">🔍</button>
+                    <button class="event-btn" data-event="Funny 🤣 (Opposition)">🤣</button>
+                </div>
+                <div class="event-row">
+                    <button class="event-btn" data-event="Yellow Card 🟨 (Opposition)">🟨</button>
+                    <button class="event-btn" data-event="Red Card 🟥 (Opposition)">🟥</button>
+                    <button class="event-btn" data-event="Substitution 🔄️ (Opposition)">🔄️</button>
+                    <button class="event-btn" data-event="Incident 💥 (Opposition)">💥</button>
+                </div>
+            </div>
+        </div>
+        <div id="eventLog" class="event-log"></div>
     </div>
-    
     <script src="script.js"></script>
 </body>
 </html>
