@@ -24,14 +24,34 @@ body, html {
     margin-top: 10px; /* Adjust based on actual logo size */
 }
 
-.timer {
-    font-size: 2.5em;
-    font-family: 'Digital-7', monospace; /* Digital clock font for the timer */
-    color: #C5FB4B; /* Lime green text */
-    background-color: #000; /* Black background for the timer box */
-    border: 2px solid #FFF; /* White border */
-    padding: 10px;
-    margin: 20px 0;
+.event-log {
+    color: #FFF;
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    text-align: left; /* Left align text */
+    margin: 0; /* Remove margin */
+}
+
+.event-log li {
+    display: flex; /* Use flex to align items */
+    justify-content: space-between; /* Space between text and button */
+    align-items: center; /* Align items vertically */
+    line-height: 1; /* No extra spacing between lines */
+}
+
+.delete-button {
+	background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    color: white; /* White text */
+    height: 1em; /* Set height to match text */
+    width: 1em; /* Set width to match text */
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center buttons */
 }
 
 button {
@@ -42,42 +62,17 @@ button {
     font-size: 16px;
     cursor: pointer;
     display: inline-block;
-    min-width: 130px; /* Ensure buttons do not shrink */
+    min-width: 40px; /* Ensure buttons do not shrink */
+    height: 40px; /* Set a consistent height */
 }
 
 .control-buttons button {
     background-color: #FFC525; /* Green background */
-    color: #000000; /* White text */
+    color: #000000; /* Black text */
     width: 90%;
+	font-weight: bold; /* Makes text bold */
 }
 
-.event-buttons .event-row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.event-buttons button {
-    background-color: #FFF; /* White background */
-    color: #000; /* Black text */
-    width: 48%; /* Adjusted width for side-by-side layout */
-}
-
-.event-log {
-    color: #FFF;
-    text-align: left; /* Left align text */
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    margin-top: 20px; /* Add space above log */
-}
-
-.event-log div {
-    margin: 0; /* Remove margin between log entries */
-}
-
-.delete-btn {
-    background-color: transparent; /* Background for delete button */
-    border: none; /* No border */
-    cursor: pointer; /* Cursor pointer */
-    color: red; /* Red color for delete button */
-    font-size: 1.2em; /* Font size for delete button */
+.control-buttons {
+    margin-top: 20px; /* Space above control buttons */
 }
